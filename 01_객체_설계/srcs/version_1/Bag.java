@@ -3,8 +3,11 @@ public class Bag {
     private Invitation invitation;
     private Ticket ticket;
 
+// == 생성자(Constructor) ==============
     public Bag(long amount) {
+        // 생성자 위임(Constructor Delegation)
         this(null, amount);
+        // Bag(null, amount) 생성자 호출
     }
 
     public Bag(Invitation invitation, long amount) {
@@ -12,6 +15,7 @@ public class Bag {
         this.amount = amount;
     }
 
+// == 메서드(Method) ==============
     public boolean hasInvitation() {
         return invitation != null;
     }
